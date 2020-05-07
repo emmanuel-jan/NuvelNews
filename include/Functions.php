@@ -6,7 +6,7 @@ function redirect_to($New_Location){
     exit;
 }
 function Login_Attempt($Username,$Password){
-    $conn=mysqli_connect("localhost","root","Emaochi99","phpcms");
+    $conn=mysqli_connect("us-cdbr-east-06.cleardb.net","bbc254d8bb6a7d","2540353d","heroku_cec9f6d0f0bc5ac");
     $sql="SELECT * FROM registration WHERE username='$Username' AND password='$Password'";
     $result=$conn->query($sql);
     if($admin=mysqli_fetch_assoc($result)){
